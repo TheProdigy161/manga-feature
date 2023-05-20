@@ -1,6 +1,8 @@
 import { DateTime } from 'luxon';
+import { v4 as uuid } from 'uuid';
 
 export class Author {
+    id?: string = uuid();
     forename: string;
     surname: string;
     summary: string;
@@ -9,7 +11,8 @@ export class Author {
     constructor(data?: Author) {
         if (!data)
             return;
-
+            
+        this.id = data.id;
         this.forename = data.forename;
         this.surname = data.surname;
         this.summary = data.summary;
