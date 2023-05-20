@@ -8,7 +8,7 @@ export class Author {
     pseudonym?: string;
     summary: string;
     birthday: DateTime;
-    photo?: Blob;
+    image?: Blob;
 
     constructor(data?: Author) {
         if (!data)
@@ -20,6 +20,6 @@ export class Author {
         this.pseudonym = data.pseudonym;
         this.summary = data.summary;
         this.birthday = data.birthday;
-        this.photo = data.photo;
+        this.image = data.image;
     }
 }
