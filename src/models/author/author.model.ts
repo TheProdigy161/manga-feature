@@ -1,5 +1,6 @@
 import { DateTime } from 'luxon';
 import { v4 as uuid } from 'uuid';
+import { Manga } from '../manga/manga.model';
 
 export class Author {
     id?: string = uuid();
@@ -9,6 +10,8 @@ export class Author {
     summary: string;
     birthday: DateTime;
     image?: Blob;
+
+    mangas: Manga[] = []; 
 
     constructor(data?: Author) {
         if (!data)
