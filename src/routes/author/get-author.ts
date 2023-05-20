@@ -1,5 +1,5 @@
 import { Response, Request } from 'express';
-import { Author } from '../../models/author.model';
+import { Author } from '../../models/author/author.model';
 import { DateTime } from 'luxon';
 
 export default (req: Request<{id: string}>, res: Response) => {
